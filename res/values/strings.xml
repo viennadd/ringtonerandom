@@ -4,5 +4,9 @@
     <string name="app_name">RingtoneRandom</string>
     <string name="action_settings">Settings</string>
     <string name="hello_world">Hello world!</string>
+    <string name="startReceiver">Strat Broadcast Receiver</string>
+    <string name="stopReceiver">Stop Broadcast Receiver</string>
+    <string name="add">Add Ringtone</string>
+    <string name="manage">Manage Ringtone</string>
 
 </resources>
