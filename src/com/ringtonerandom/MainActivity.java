@@ -70,11 +70,11 @@ public class MainActivity extends Activity {
 			folder.mkdirs();
 			Toast.makeText(this, "[good] make dirs", Toast.LENGTH_LONG).show();
 		}
-		
+		 
 		
 		File ringtones[] = folder.listFiles(filter);
 		
-		String msg = new String();
+		String msg = new String("文件夹内有：\n");
 		for (int i = 0; i < ringtones.length; ++i) {
 			msg += ringtones[i].getAbsolutePath() + "\n";
 		}
