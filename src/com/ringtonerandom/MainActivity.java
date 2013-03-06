@@ -35,7 +35,6 @@ public class MainActivity extends Activity {
 	
 	private TextView tvDebugMsg;
 	
-	private FileFilter filter;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -54,13 +53,13 @@ public class MainActivity extends Activity {
 //		btnAddRingtone.setOnClickListener(this);
 //		btnManageRingtone.setOnClickListener(this);
 		tvDebugMsg = (TextView)findViewById(R.id.debugMsg);
-		filter = new FileFilter() {
-			@Override
-			public boolean accept(File pathname) {
-				// TODO Auto-generated method stub
-				return pathname.getAbsolutePath().endsWith(".mp3");
-			}
-		};
+//		filter = new FileFilter() {
+//			@Override
+//			public boolean accept(File pathname) {
+//				// TODO Auto-generated method stub
+//				return pathname.getAbsolutePath().endsWith(".mp3");
+//			}
+//		};
 		
 		
 		// create folder
@@ -72,7 +71,7 @@ public class MainActivity extends Activity {
 		}
 		 
 		
-		File ringtones[] = folder.listFiles(filter);
+		File ringtones[] = folder.listFiles();
 		
 		String msg = new String("文件夹内有：\n");
 		for (int i = 0; i < ringtones.length; ++i) {

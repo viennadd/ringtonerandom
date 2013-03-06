@@ -19,24 +19,24 @@ import android.widget.Toast;
 
 public class RingtoneRandomReceiver extends BroadcastReceiver {
 
-	private FileFilter filter;
+//	private FileFilter filter;
 	
 	@Override
 	public void onReceive(Context context, Intent intent) {
 		// TODO Auto-generated method stub
 	
-		filter = new FileFilter() {
-			@Override
-			public boolean accept(File pathname) {
-				// TODO Auto-generated method stub
-				return pathname.getAbsolutePath().endsWith(".mp3");
-			}
-		};
+//		filter = new FileFilter() {
+//			@Override
+//			public boolean accept(File pathname) {
+//				// TODO Auto-generated method stub
+//				return pathname.getAbsolutePath().endsWith(".mp3");
+//			}
+//		};
 		
 		String strFolder = getSDPath() + "/ringtonewillrandom/";
 		File folder = new File(strFolder);
 
-		File ringtones[] = folder.listFiles(filter);
+		File ringtones[] = folder.listFiles();
 
 		if (ringtones.length == 0) {
 			Toast.makeText(context, "no ringtones", Toast.LENGTH_LONG).show();
